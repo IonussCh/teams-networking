@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1",
+        "group": "won1",
+        "members": "Nicolae Matei, Andrei Ille",
+        "name": "Teams Networking",
+        "url": "https://github.com/nmatei/teams-networking"
+    },
+    {
+        "id": "2",
+        "group": "won1",
+        "members": "Coman Oana, Adina Bîlc, Bianca Vesa",
+        "name": "Medical Inventory store",
+        "url": "https://github.com/comanoana/medstore"
+    },
+    {
+        "id": "3",
+        "group": "won1",
+        "members": "Cristi Cosma, Reka Kovacs, Simona Glodean",
+        "name": "DOCS Generator",
+        "url": "https://github.com/CristiCozma/docsgenerator"
+    },
+    {
+        "id": "4",
+        "group": "won1",
+        "members": "Kadar Mihaly, Tiberiu Deak",
+        "name": "Fire Alarm",
+        "url": "https://github.com/deaktiberiu/alarmaaa"
+    },
+    {
+        "id": "5",
+        "group": "won1",
+        "members": "Iacob Tudor, Andrei Tirla, Rareș Roman, Vlad Felecan",
+        "name": "Hunting Quiz",
+        "url": "https://github.com/romanrares/hunters"
+    },
+    {
+        "id": "6",
+        "group": "won1",
+        "members": "Stanca Știrb, Sergiu Corfu, Ștefania Popa",
+        "name": "Home Storage",
+        "url": "https://github.com/scorfu/myStorage"
+    }, 
+    {
+        "id": "7",
+        "group": "won2",
+        "members": "Alexandra Chicinas, Adelina Nica, Fineas Berende, Ciprian Chesa, Violeta Mercea",
+        "name": "Farm Delivery",
+        "url": "https://github.com/alexandraschicinas/Farm_Delivery"
+    },
+    {
+        "id": "8",
+        "group": "won2",
+        "members": "Adriana Mocanu, Bogdan Muste, Alexandra Stanescu",
+        "name": "Animal Register",
+        "url": "https://github.com/adriana-mocanu/animal-register"
+    }
+]
