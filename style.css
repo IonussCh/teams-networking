@@ -1,0 +1,18 @@
+#list {
+    border-collapse: collapse;
+    width: 100%;
+}
+#list th {
+    background-color: #ef0014;
+    color: white;
+}
+#list th, #list td {
+    border: 1px solid #cacaca;
+    padding: 5px;
+}
+#list tr:nth-child(even) {
+    background-color: #f2f2f296;
+}
+#list tfoot input[type="text"] {
+    width: 100%;
+}
