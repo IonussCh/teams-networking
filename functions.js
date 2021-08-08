@@ -11,7 +11,7 @@ function addEventListener() {
 
   const getBtn = document.getElementById("get");
   getBtn.addEventListener("click", () => {
-    /* Aici e doar promise-u */
+    /* aici e doar promise-u */
     console.log("team promise is: ", getTeamMembers());
 
     /* aici is rezultatele */
