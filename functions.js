@@ -3,7 +3,7 @@
 //        return firstNames;
 //    }
 
-function addEventListener() {
+function initEvents() {
   const saveBtn = document.getElementById("saveButton");
   saveBtn.addEventListener("click", () => {
     saveTeamMember();
@@ -20,6 +20,7 @@ function addEventListener() {
     });
   });
 }
+initEvents();
 
 function getTeamMembers() {
     return fetch("teams.json").then((response) => {
@@ -51,3 +52,5 @@ function saveTeamMember() {
 
 
 //   console.log(group.value, members.value, name.value, url.value); 
+
+
