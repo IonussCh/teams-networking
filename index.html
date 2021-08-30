@@ -1,16 +1,15 @@
 <html lang="en">
-    
   <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
-
     <h1>Teams Networking</h1>
     <div>
+  <form onsubmit="submitTeam(); return false;">  
       <table id="list">
         <colgroup>
           <col span="1" style="width: 100px" />
@@ -28,28 +27,21 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>    </tbody>
+        <tbody></tbody>
         <tfoot>
           <tr>
+            <td><input type="text" required name="group" placeholder="Group" /></td>
+            <td><input type="text" required name="members" placeholder="Members" /></td>
+            <td><input type="text" required name="name" placeholder="Name" /></td>
+            <td><input type="text" required name="url" placeholder="URL" /></td>
             <td>
-              <input type="text" placeholder="Enter group" name="group" />
-            </td>
-            <td>
-              <input type="text" placeholder="Enter members" name="members" />
-            </td>
-            <td>
-              <input type="text" placeholder="Enter project name" name="name" />
-            </td>
-            <td>
-              <input type="text" placeholder="URL" name="url" />
-            </td>
-            <td>
-             <button id="get">Get</button>
-             <button id="saveButton">Save</button>
+              <button id="get">Get</button>
+              <button id="saveButton">Save</button>
             </td>
           </tr>
         </tfoot>
       </table>
+    </form>
     </div>
     <script src="functions.js"></script>
   </body>
