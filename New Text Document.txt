@@ -1,0 +1,104 @@
+// function initEvents() {
+//   const saveBtn = document.getElementById("saveButton");
+//   saveBtn.addEventListener("click", () => {
+//     saveTeamMember();
+//   });
+
+//   function getTeamMembers() {
+//     return fetch("http://localhost:3000/teams-json").then((response) => {
+//       return response.json();
+//     });
+//   }
+
+//   const getBtn = document.getElementById("get");
+//   getBtn.addEventListener("click", () => {
+//     /*promise */
+//     console.log("team promise is: ", getTeamMembers());
+
+//     /*rezultate */
+//     getTeamMembers().then((team) => {
+//       console.log("actual team is: ", team);
+//     });
+//   });
+// }
+// initEvents();
+
+// function saveTeamMember() {
+//   const promotion = document.getElementsByName("promotion")[0];
+//   const members = document.getElementsByName("members")[0];
+//   const name = document.getElementsByName("name")[0];
+//   const url = document.getElementsByName("url")[0];
+
+//   console.log("promotion", promotion);
+
+//   let table = document.getElementById("list");
+
+//   let row = table.insertRow(0);
+
+//   let cell1 = row.insertCell(0);
+//   let cell2 = row.insertCell(1);
+//   let cell3 = row.insertCell(2);
+//   let cell4 = row.insertCell(3);
+
+//   cell1.innerHTML = promotion.value;
+//   cell2.innerHTML = members.value;
+//   cell3.innerHTML = name.value;
+//   cell4.innerHTML = url.value;
+// }
+
+
+// function deleteTeam(id) {
+//   fetch("http://localhost:3000/teams-json/delete", {
+//   method: "DELETE",
+//   headers: {
+//     "Content-Type": "application/json"
+//   },
+//   body: JSON.stringify({ id })
+// });
+// }
+
+// function saveTeam(team) {
+//   fetch("http://localhost:3000/teams-json/create", {
+//     method: "POST",
+//     headers: {
+//       "content-type": "application/json",
+//     },
+//     body: JSON.stringify(team),
+//   })
+//     .then((r) => r.json())
+//     .then((status) => {
+//     });
+// }
+
+// function loadTeams() {
+//   fetch("http://localhost:3000/teams-json")
+//     .then((r) => r.json())
+//     .then((teams) => {
+//       allTeams = teams;
+//       displayTeams(teams);
+//     });
+// }
+
+// function displayTeams(teams) {
+//   const html = getTeamsAsHTML(teams);
+//   document.querySelector("#list tbody").innerHTML = html;
+// }
+
+// function getTeamsAsHTML(teams) {
+//   return teams
+//     .map((team) => {
+//       console.log("team", team);
+//       return `<tr>
+//         <td>${team.promotion}</td>
+//         <td>${team.members}</td>
+//         <td>${team.name}</td>
+//         <td>${team.url}</td>
+//         <td>
+//           <a>&#10006;</a>
+//           <a>&#10006;</a>
+//         </td>`;
+//     })
+//     .join("");
+// }
+
+// loadTeams();
