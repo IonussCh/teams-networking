@@ -1,48 +1,49 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Teams Networking</h1>
-    <div>
-  <form onsubmit="submitTeam(); return false;">  
-      <table id="list">
-        <colgroup>
-          <col span="1" style="width: 100px" />
-          <col span="1" />
-          <col span="1" />
-          <col span="1" style="width: 150px" />
-          <col span="1" style="width: 70px" />
-        </colgroup>
-        <thead>
-          <tr>
-            <th>Group</th>
-            <th>Members</th>
-            <th>Project Name</th>
-            <th>URL</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-        <tfoot>
-          <tr>
-            <td><input type="text" required name="group" placeholder="Group" /></td>
-            <td><input type="text" required name="members" placeholder="Members" /></td>
-            <td><input type="text" required name="name" placeholder="Name" /></td>
-            <td><input type="text" required name="url" placeholder="URL" /></td>
-            <td>
-            
-              <button id="saveButton">Save</button>
-            </td>
-          </tr>
-        </tfoot>
-      </table>
-    </form>
-    </div>
-    <script src="functions.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+  <h1>Teams Networking</h1>
+  <input type="text" placeholder="Search" id="search">
+  <label for="search">
+    &#128270;
+  </label>
+
+  <form onsubmit="submitTeam(); return false;" onreset="editId = 0;">
+  <table id="list" border="1">
+    <thead>
+      <tr>
+        <th>Group</th>
+        <th>Members</th>
+        <th>Project Name</th>
+        <th>URL</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td><input type="text" required name="promotion" placeholder="Group"></td>
+        <td><input type="text" required name="members" placeholder="Members"></td>
+        <td><input type="text" required name="name" placeholder="Name"></td>
+        <td><input type="text" required name="url" placeholder="URL"></td>
+        <td>
+          <button type="submit"><i class="fas fa-save"></i></button>
+          <button type="reset"><i class="fas fa-undo"></i></button>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+  </form>
+  <script src="functions.js"></script>
+</body>
 </html>
