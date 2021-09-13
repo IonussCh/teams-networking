@@ -9,13 +9,13 @@ function loadTeams() {
       allTeams = teams;
       displayTeams(teams);
     });
-}
+};
 
 function highlight(text, search) {
-  return search ? text.replaceAll(new RegExp(search, "gi"), m => {
+  return search ? text.replaceAll(search, m => {
     return `<span class="highlight">${m}</span>` ;
   }) : text;
-}
+};
 
 function getTeamsAsHTML(teams, search) {
   return teams.map(team => {
@@ -34,10 +34,10 @@ function getTeamsAsHTML(teams, search) {
 
 function displayTeams(teams) {
   const search = document.getElementById("search").value.toLowerCase();
-  const html = getTeamsAsHTML(teams, search);
+  const html = getTeamsAsHTML(teams, search ? new RegExp(search, "gi"): 0);
 
   document.querySelector('#list tbody').innerHTML = html;
-}
+};
 
 function getTeamValues() {
   const promotion = document.querySelector("[name=promotion]").value;
@@ -51,7 +51,7 @@ function getTeamValues() {
     name,
     url,
   };
-}
+};
 
 function setTeamValues(team) {
   console.warn("edit", team);
@@ -59,7 +59,7 @@ function setTeamValues(team) {
   document.querySelector("[name=members]").value = team.members;
   document.querySelector("[name=name]").value = team.name;
   document.querySelector("[name=url]").value = team.url;
-}
+};
 
 function saveTeam(team) {
   fetch("http://localhost:3000/teams/create", {
@@ -76,7 +76,7 @@ function saveTeam(team) {
         document.querySelector("form").reset();
       }
     });
-}
+};
 
 function deleteTeam(id) {
   fetch("http://localhost:3000/teams/delete", {
@@ -92,7 +92,7 @@ function deleteTeam(id) {
         loadTeams();
       }
     });
-}
+};
 
 function updateTeam(team) {
   fetch("http://localhost:3000/teams/update", {
@@ -110,7 +110,7 @@ function updateTeam(team) {
         editId = 0;
       }
     });
-}
+};
 
 function editTeam(id) {
   editId = id;
@@ -126,7 +126,7 @@ function submitTeam() {
   } else {
     saveTeam(team);
   }
-}
+};
 
 loadTeams();
 
